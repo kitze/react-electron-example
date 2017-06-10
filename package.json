@@ -1,20 +1,19 @@
 {
   "name": "cra-electron",
-  "author": "kitze",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "cross-env": "^5.0.1",
-    "electron-is-dev": "^0.1.2",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "cross-env": "5.0.1",
+    "electron-is-dev": "0.1.2",
+    "react": "15.5.4",
+    "react-dom": "15.5.4"
   },
   "devDependencies": {
-    "concurrently": "^3.4.0",
-    "electron": "^1.6.10",
-    "electron-builder": "^18.6.2",
+    "concurrently": "3.4.0",
+    "electron": "1.6.10",
+    "electron-builder": "18.7.0",
     "react-scripts": "1.0.7",
-    "wait-on": "^2.0.2"
+    "wait-on": "2.0.2"
   },
   "main": "public/electron.js",
   "homepage": "./",
@@ -35,8 +34,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "electron-dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "electron-pack": "build --mac --em.main=build/electron.js",
-    "electron-release": "build --mac --publish=always",
+    "electron-pack": "build --em.main=build/electron.js",
     "preelectron-pack": "yarn build"
   }
 }
