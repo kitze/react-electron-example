@@ -11,7 +11,7 @@ class App extends Component {
           <h2>React + Electron = <span role="img" aria-label="love">😍</span></h2>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+         Version: 0.1.2
         </p>
       </div>
     );

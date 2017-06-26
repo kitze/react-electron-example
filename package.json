@@ -1,17 +1,20 @@
 {
   "name": "cra-electron",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "dependencies": {
     "cross-env": "5.0.1",
     "electron-is-dev": "0.1.2",
+    "electron-log": "^2.2.6",
+    "electron-updater": "^2.4.3",
     "react": "15.5.4",
     "react-dom": "15.5.4"
   },
   "devDependencies": {
     "concurrently": "3.4.0",
     "electron": "1.6.10",
-    "electron-builder": "18.7.0",
+    "electron-builder": "^19.8.0",
+    "prettier": "^1.4.4",
     "react-scripts": "1.0.7",
     "wait-on": "2.0.2"
   },
@@ -26,6 +29,9 @@
     ],
     "directories": {
       "buildResources": "assets"
+    },
+    "publish":{
+      "provider": "github"
     }
   },
   "scripts": {
