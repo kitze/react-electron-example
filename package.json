@@ -1,6 +1,6 @@
 {
   "name": "cra-electron",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "private": true,
   "dependencies": {
     "cross-env": "5.0.1",
@@ -42,6 +42,7 @@
     "electron-dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
     "electron-pack": "build --em.main=build/electron.js",
     "electron-release": "build --em.main=build/electron.js --publish=always",
-    "preelectron-pack": "yarn build"
+    "preelectron-pack": "yarn build",
+    "preelectron-release": "yarn build"
   }
 }

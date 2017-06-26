@@ -26,7 +26,7 @@ function createWindow() {
 
 function initAutoUpdate() {
 
-  let updater;
+  let updater = {}
   autoUpdater.checkForUpdates();
 
   autoUpdater.on('error', (event, error) => {
