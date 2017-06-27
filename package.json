@@ -1,12 +1,13 @@
 {
   "name": "cra-electron",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": true,
   "dependencies": {
     "cross-env": "5.0.1",
     "electron-is-dev": "0.1.2",
     "electron-log": "^2.2.6",
     "electron-updater": "^2.4.3",
+    "node-notifier": "^5.1.2",
     "react": "15.5.4",
     "react-dom": "15.5.4"
   },
@@ -30,7 +31,7 @@
     "directories": {
       "buildResources": "assets"
     },
-    "publish":{
+    "publish": {
       "provider": "github"
     }
   },
