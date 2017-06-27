@@ -2,7 +2,6 @@ const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
-const platform = require('os').platform;
 const path = require('path');
 const url = require('url');
 const isDev = require('electron-is-dev');
@@ -28,8 +27,7 @@ function initAutoUpdate() {
     return;
   }
 
-  const platform = platform();
-  if (platform === 'linux') {
+  if (process.platform === 'linux') {
     return;
   }
 

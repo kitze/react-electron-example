@@ -11,7 +11,7 @@ class App extends Component {
           <h2>React + Electron = <span role="img" aria-label="love">😍</span></h2>
         </div>
         <p className="App-intro">
-         Version: 0.1.7
+         Version: 0.1.8
         </p>
       </div>
     );
