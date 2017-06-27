@@ -1,6 +1,6 @@
 {
   "name": "cra-electron",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "private": true,
   "dependencies": {
     "cross-env": "5.0.1",
