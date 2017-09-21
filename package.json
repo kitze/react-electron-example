@@ -2,6 +2,9 @@
   "name": "cra-electron",
   "version": "0.1.9",
   "private": true,
+  "author": "electron-cra",
+  "description": "A simple skeleton electron react application",
+  "homepage": "./",
   "dependencies": {
     "cross-env": "5.0.1",
     "electron-is-dev": "0.1.2",
@@ -25,7 +28,6 @@
     "appId": "com.example.electron-cra",
     "files": [
       "build/**/*",
-      "node_modules/**/*",
       "package.json"
     ],
     "directories": {
