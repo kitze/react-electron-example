@@ -23,7 +23,6 @@
     "wait-on": "2.0.2"
   },
   "main": "public/electron.js",
-  "homepage": "./",
   "build": {
     "appId": "com.example.electron-cra",
     "files": [
