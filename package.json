@@ -1,6 +1,6 @@
 {
   "name": "example-cra-electron",
-  "version": "0.1.11",
+  "version": "0.1.10",
   "private": true,
   "author": "electron-cra-example",
   "description": "A simple skeleton example application made with electron react",
@@ -42,7 +42,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "pack": "build --em.main=build/electron.js --dir",
+    "pack": "build --em.main=build/electron.js",
     "release": "build --em.main=build/electron.js --publish=always",
     "prepack": "yarn build",
     "prerelease": "yarn build"
