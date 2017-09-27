@@ -34,9 +34,6 @@
     },
     "publish": {
       "provider": "github"
-    },
-    "nsis": {
-      "differentialPackage ": "true"
     }
   },
   "scripts": {
