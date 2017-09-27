@@ -2,29 +2,29 @@
   "name": "cra-electron",
   "version": "0.1.10",
   "private": true,
-  "author": "electron-cra",
+  "author": "electron-cra-example",
   "description": "A simple skeleton electron react application",
   "homepage": "./",
   "dependencies": {
-    "cross-env": "5.0.1",
-    "electron-is-dev": "0.1.2",
+    "electron-is-dev": "^0.1.2",
     "electron-log": "^2.2.6",
     "electron-updater": "^2.4.3",
     "node-notifier": "^5.1.2",
-    "react": "15.5.4",
-    "react-dom": "15.5.4"
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
-    "concurrently": "3.4.0",
-    "electron": "1.6.10",
+    "cross-env": "^5.0.1",
+    "concurrently": "^3.4.0",
+    "electron": "^1.6.10",
     "electron-builder": "^19.8.0",
     "prettier": "^1.4.4",
-    "react-scripts": "1.0.7",
-    "wait-on": "2.0.2"
+    "react-scripts": "^1.0.7",
+    "wait-on": "^2.0.2"
   },
   "main": "public/electron.js",
   "build": {
-    "appId": "com.example.electron-cra",
+    "appId": "io.atom.electron.electron-cra-example",
     "files": [
       "build/**/*",
       "package.json"
@@ -34,6 +34,9 @@
     },
     "publish": {
       "provider": "github"
+    },
+    "nsis": {
+      "differentialPackage ": "true"
     }
   },
   "scripts": {
@@ -41,10 +44,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "electron-dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "electron-pack": "build --em.main=build/electron.js",
-    "electron-release": "build --em.main=build/electron.js --publish=always",
-    "preelectron-pack": "yarn build",
-    "preelectron-release": "yarn build"
+    "dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "pack": "build --em.main=build/electron.js --dir",
+    "release": "build --em.main=build/electron.js --publish=always",
+    "prepack": "yarn build",
+    "prerelease": "yarn build"
   }
 }
