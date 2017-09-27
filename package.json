@@ -1,6 +1,6 @@
 {
   "name": "example-cra-electron",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "private": true,
   "author": "electron-cra-example",
   "description": "A simple skeleton example application made with electron react",
