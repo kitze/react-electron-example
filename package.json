@@ -1,31 +1,32 @@
 {
-  "name": "cra-electron",
-  "version": "0.1.9",
+  "name": "example-cra-electron",
+  "version": "0.1.10",
   "private": true,
+  "author": "electron-cra-example",
+  "description": "A simple skeleton example application made with electron react",
+  "homepage": "./",
   "dependencies": {
-    "cross-env": "5.0.1",
-    "electron-is-dev": "0.1.2",
-    "electron-log": "^2.2.6",
-    "electron-updater": "^2.4.3",
-    "node-notifier": "^5.1.2",
-    "react": "15.5.4",
-    "react-dom": "15.5.4"
+    "electron-is-dev": "^0.3.0",
+    "electron-log": "^2.2.14",
+    "electron-updater": "^2.21.4",
+    "node-notifier": "^5.2.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1"
   },
   "devDependencies": {
-    "concurrently": "3.4.0",
-    "electron": "1.6.10",
-    "electron-builder": "^19.8.0",
-    "prettier": "^1.4.4",
-    "react-scripts": "1.0.7",
-    "wait-on": "2.0.2"
+    "concurrently": "^3.5.1",
+    "cross-env": "^5.1.4",
+    "electron": "^1.8.4",
+    "electron-builder": "^20.8.1",
+    "prettier": "^1.12.0",
+    "react-scripts": "^1.1.4",
+    "wait-on": "^2.1.0"
   },
   "main": "public/electron.js",
-  "homepage": "./",
   "build": {
-    "appId": "com.example.electron-cra",
+    "appId": "io.atom.electron.electron-cra-example",
     "files": [
       "build/**/*",
-      "node_modules/**/*",
       "package.json"
     ],
     "directories": {
@@ -40,10 +41,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "electron-dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "electron-pack": "build --em.main=build/electron.js",
-    "electron-release": "build --em.main=build/electron.js --publish=always",
-    "preelectron-pack": "yarn build",
-    "preelectron-release": "yarn build"
+    "dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "pack": "build -c.extraMetadata.main=build/electron.js",
+    "release": "build -c.extraMetadata.main=build/electron.js --publish=always",
+    "prepack": "yarn build",
+    "prerelease": "yarn build"
   }
 }

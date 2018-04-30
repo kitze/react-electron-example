@@ -1,5 +1,9 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+#editor
+*.sublime-project
+*.sublime-workspace
+
 # dependencies
 /node_modules
 
@@ -16,8 +20,10 @@
 .env.development.local
 .env.test.local
 .env.production.local
+electron-builder.env
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+yarn.lock
 .idea
