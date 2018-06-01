@@ -1,49 +1,35 @@
 {
   "name": "cra-electron",
-  "version": "0.1.9",
+  "description": "CRA + Electron sitting in a tree",
+  "author": "Kitze",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
-    "cross-env": "5.0.1",
-    "electron-is-dev": "0.1.2",
+    "cross-env": "5.1.6",
+    "electron-is-dev": "0.3.0",
     "electron-log": "^2.2.6",
-    "electron-updater": "^2.4.3",
+    "electron-updater": "^2.21.10",
     "node-notifier": "^5.1.2",
-    "react": "15.5.4",
-    "react-dom": "15.5.4"
+    "react": "16.4.0",
+    "react-dom": "16.4.0"
   },
   "devDependencies": {
-    "concurrently": "3.4.0",
-    "electron": "1.6.10",
-    "electron-builder": "^19.8.0",
+    "concurrently": "3.5.1",
+    "electron": "2.0.2",
+    "electron-builder": "^20.15.1",
     "prettier": "^1.4.4",
-    "react-scripts": "1.0.7",
-    "wait-on": "2.0.2"
+    "react-scripts": "1.1.4",
+    "wait-on": "2.1.0"
   },
   "main": "public/electron.js",
   "homepage": "./",
-  "build": {
-    "appId": "com.example.electron-cra",
-    "files": [
-      "build/**/*",
-      "node_modules/**/*",
-      "package.json"
-    ],
-    "directories": {
-      "buildResources": "assets"
-    },
-    "publish": {
-      "provider": "github"
-    }
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "electron-dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "electron-pack": "build --em.main=build/electron.js",
-    "electron-release": "build --em.main=build/electron.js --publish=always",
-    "preelectron-pack": "yarn build",
-    "preelectron-release": "yarn build"
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test --env=jsdom",
+    "react-eject": "react-scripts eject",
+    "electron-build": "electron-builder",
+    "build": "yarn react-build && yarn electron-build",
+    "start": "concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron .\""
   }
 }
