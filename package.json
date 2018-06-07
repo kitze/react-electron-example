@@ -2,14 +2,15 @@
   "name": "cra-electron",
   "description": "CRA + Electron sitting in a tree",
   "author": "Kitze",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": true,
   "dependencies": {
     "cross-env": "5.1.6",
     "electron-is-dev": "0.3.0",
     "electron-log": "^2.2.6",
     "react": "16.4.0",
-    "react-dom": "16.4.0"
+    "react-dom": "16.4.0",
+    "update-electron-app": "^1.2.0"
   },
   "devDependencies": {
     "concurrently": "3.5.1",
