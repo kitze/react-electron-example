@@ -8,8 +8,8 @@
     "cross-env": "5.1.6",
     "electron-is-dev": "0.3.0",
     "electron-log": "^2.2.6",
-    "react": "16.4.0",
-    "react-dom": "16.4.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "update-electron-app": "^1.2.0"
   },
   "devDependencies": {
