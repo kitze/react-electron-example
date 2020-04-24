@@ -1,26 +1,30 @@
 {
   "name": "cra-electron",
+  "version": "0.2.7",
   "description": "CRA + Electron sitting in a tree",
   "author": "Kitze",
-  "version": "0.2.7",
   "private": true,
   "dependencies": {
-    "cross-env": "6.0.2",
-    "electron-is-dev": "1.1.0",
-    "electron-log": "^3.0.8",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "update-electron-app": "^1.2.0"
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "cross-env": "^7.0.2",
+    "electron-is-dev": "^1.2.0",
+    "electron-log": "^4.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "update-electron-app": "^1.5.0"
   },
   "devDependencies": {
-    "concurrently": "4.1.2",
-    "electron": "6.0.11",
-    "electron-builder": "^21.2.0",
-    "prettier": "^1.4.4",
-    "react-scripts": "3.1.2",
-    "wait-on": "3.3.0"
+    "concurrently": "^5.1.0",
+    "electron": "^8.2.3",
+    "electron-builder": "^22.5.1",
+    "prettier": "^2.0.5",
+    "wait-on": "^4.0.2"
   },
   "build": {
+    "appId": "com.example.cra-electron",
     "publish": {
       "provider": "github"
     }
@@ -36,6 +40,9 @@
     "release": "yarn react-build && electron-builder --publish=always",
     "build": "yarn react-build && yarn electron-build",
     "start": "concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
