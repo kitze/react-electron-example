@@ -169,7 +169,7 @@ An example of using React \(create\-react\-app\) with Electron
       AI influencer generator: create a realistic influencer from traits or your photos, then make photos, talking videos and UGC ads with the same face every time.
     </td>
     <td width="33%" valign="top">
-      <a href="https://pluginboard.ai/?ref=kitze%2Freact-electron-example"><img src="https://pluginboard.ai/icon.png?icon.0yaf1ql1jrfgd.png" width="40" alt="Pluginboard logo"></a><br>
+      <a href="https://pluginboard.ai/?ref=kitze%2Freact-electron-example"><img src="https://media.gifs.so/sponsors/kitze-io/pluginboard.png" width="40" alt="Pluginboard logo"></a><br>
       <strong><a href="https://pluginboard.ai/?ref=kitze%2Freact-electron-example">Pluginboard</a></strong><br>
       Find the right plugins for your AI agents. Plugins, skills and step-by-step recipes for Claude, ChatGPT, Grokbot, Muse, Gemini and more.
     </td>
